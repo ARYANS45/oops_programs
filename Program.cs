@@ -4,18 +4,13 @@
     {
         static void Main(string[] args)
         {
-            // class_object(); 
-            // cons_des();
-            // useofgarbage();
+             class_object(); 
+             cons_des();
+             useofgarbage();
             
-            new useofstatic();
-            useofstatic obj = new useofstatic("Aryan",21);
-            useofstatic obj2 = new useofstatic("omkar",22);
-            useofstatic.display();
-
-            static12.show();
-           
-
+             exofstatic();
+             copycons();
+            
             //Console.WriteLine(useofconstructor.sintobjectcount);
             Console.ReadLine();
 
@@ -56,5 +51,26 @@
                 }
             }
         }
+
+         public static void exofstatic()
+         {
+            useofstatic obj = new useofstatic("Aryan", 21);
+            useofstatic obj2 = new useofstatic("omkar", 22);
+            useofstatic.display();
+
+            static12.show();
+         }
+
+       public static void copycons()
+       {
+          Area lobj = new Area();
+          lobj.Length = 20;
+          lobj.Width = 15;
+          lobj.Show();
+
+          Area lobjDuplicate = new Area(lobj);
+          lobjDuplicate.Show();
+      }
     }
 }
+
